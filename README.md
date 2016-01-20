@@ -16,7 +16,7 @@ method is
 
 The von Neumann stability analysis predicts stability for
 <p align="center">
-<img src="stuffy_stuff/f3.png" width="300">
+<img src="stuffy_stuff/f3.png" width="100">
 </p>
 
 Implement this explicit method and compare the numerical results to the analytic solution. The analytic solution is available as column 3 in every output file. Experiment with *dt*, how is the numerical solution affected once the stability criterion is violated?
