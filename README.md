@@ -19,4 +19,4 @@ The von Neumann stability analysis predicts stability for
 <img src="stuffy_stuff/f3.png" width="100">
 </p>
 
-Implement this explicit method and compare the numerical results to the analytic solution. The analytic solution is available as column 3 in every output file. Experiment with *dt*, how is the numerical solution affected once the stability criterion is violated?
+Implement this explicit method and compare the numerical results to the analytic solution. The analytic solution is available as column 3 in every output file. Experiment with different *dt* (or equivalent with different *D*). how is the numerical solution affected once the stability criterion is violated?
