@@ -17,7 +17,7 @@ void step(double* const u1,  double* const u0,  const double dt,
 int main(){
 
   const double tEnd = 5 ;
-  const double D = 0.1;
+  const double D = 1;
 
   const int N  = 200;
   const double xmin = -20;
@@ -58,8 +58,9 @@ int main(){
   }
 
   cout << "t = " << t << endl;
-  cout << "dt = " << dt << endl;
-  cout << "r = " << dx*dx/D/2 << endl;
+
+  if(dt<=dx*dx/D/2) cout << " stable " << endl;
+  else cout << " not stable " << endl;
 
   delete[] u0;
   delete[] u1;
@@ -73,7 +74,7 @@ void step(double* const f1, double* const f0,
     const double c=D*dt/dx/dx;
 	f1[0]=c*(f0[1]-2*f0[0]+f0[N-1])+f0[0];
 	for (int i=1;i<N-1;i++) f1[i]=c*(f0[i+1]-2*f0[i]+f0[i-1])+f0[i];
-	f1[N-1]=c*(f0[0]-2*f0[N-1]+f0[N-2])-f0[N-1];
+	f1[N-1]=c*(f0[0]-2*f0[N-1]+f0[N-2])+f0[N-1];
 }
 //-----------------------------------------------
 void initialize(double* const u0, const double dx,
